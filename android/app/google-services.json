@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "694660567151",
+    "project_id": "cloud-functions-2fb4c",
+    "storage_bucket": "cloud-functions-2fb4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694660567151:android:220cf389f8cec0f2a67d9a",
+        "android_client_info": {
+          "package_name": "com.spielereinzig.firebasecloudfunctions.firebase_cloud_functions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694660567151-n0dr1sh6oq382abusqmcm5jt5v0fue99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhZxT8CvUOSQnHmnIjjhRjchNWQ_iJ1H4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694660567151-n0dr1sh6oq382abusqmcm5jt5v0fue99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
