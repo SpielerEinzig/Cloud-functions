@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton extends StatefulWidget {
   final VoidCallback onPressed;
   final String label;
+  final bool loading;
   final double? width;
   final double? height;
   final TextStyle? textStyle;
@@ -11,6 +12,7 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.onPressed,
     required this.label,
+    required this.loading,
     this.buttonStyle,
     this.textStyle,
     this.height,
@@ -18,13 +20,18 @@ class CustomButton extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<CustomButton> createState() => _CustomButtonState();
+}
+
+class _CustomButtonState extends State<CustomButton> {
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width ?? double.infinity,
-      height: height,
+      width: widget.width ?? double.infinity,
+      height: widget.height,
       child: ElevatedButton(
-        onPressed: onPressed,
-        style: buttonStyle ??
+        onPressed: widget.onPressed,
+        style: widget.buttonStyle ??
             ElevatedButton.styleFrom(
               side: const BorderSide(
                 color: Colors.white,
@@ -35,13 +42,19 @@ class CustomButton extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(vertical: 15),
             ),
-        child: Text(
-          label,
-          style: textStyle ??
-              const TextStyle(
-                fontSize: 25,
+        child: widget.loading
+            ? const Center(
+                child: CircularProgressIndicator(
+                  color: Colors.white,
+                ),
+              )
+            : Text(
+                widget.label,
+                style: widget.textStyle ??
+                    const TextStyle(
+                      fontSize: 25,
+                    ),
               ),
-        ),
       ),
     );
   }

@@ -15,8 +15,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   final PageNavigation _navigation = PageNavigation();
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -37,6 +35,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
                 const SizedBox(height: 20),
                 CustomButton(
+                    loading: false,
                     onPressed: () {
                       _navigation.pushPage(
                         context: context,
@@ -46,6 +45,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     label: "Log in"),
                 const SizedBox(height: 20),
                 CustomButton(
+                    loading: false,
                     onPressed: () {
                       _navigation.pushPage(
                         context: context,

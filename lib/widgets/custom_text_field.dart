@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String label;
+  final bool obscureText;
   const CustomTextField({
     Key? key,
     required this.controller,
+    required this.obscureText,
     required this.label,
   }) : super(key: key);
 
@@ -13,10 +15,11 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
+      obscureText: obscureText,
       decoration: InputDecoration(
         labelText: label,
-        labelStyle: const TextStyle(
-          color: Colors.white,
+        labelStyle: TextStyle(
+          color: Colors.white.withOpacity(0.6),
         ),
         enabledBorder: textFieldBorder(),
         border: textFieldBorder(),

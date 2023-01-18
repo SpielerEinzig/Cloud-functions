@@ -22,8 +22,8 @@ class DatabaseService {
     required bool running,
   }) async {
     try {
-      await _firestore.collection("Users").doc("running").update({
-        "running": false,
+      await _firestore.collection("Users").doc(userid).update({
+        "running": running,
       });
     } on FirebaseException catch (e) {
       debugPrint("Error editing user state: $e");

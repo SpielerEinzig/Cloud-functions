@@ -31,11 +31,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
           colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.teal,
-            primaryColorDark: Colors.teal,
+            primarySwatch: Colors.blueGrey,
+            primaryColorDark: Colors.blueGrey,
             brightness: Brightness.dark,
           ),
-          scaffoldBackgroundColor: Colors.teal[900]),
+          scaffoldBackgroundColor: Colors.blueGrey[900]),
       home: const WelcomeScreen(),
     );
   }
